@@ -1,0 +1,232 @@
+:root {
+  --green-lighter: hsl(148, 38%, 91%);
+  --green-medium: hsl(169, 82%, 27%);
+  --red: hsl(0, 78%, 46%);
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--green-lighter);
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  width: 30rem;
+  background: var(--white);
+  padding: 1.4rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.contact {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--grey-900);
+}
+
+label {
+  font-size: 1rem;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 2px solid var(--grey-500);
+  border-radius: 0.4rem;
+  outline: none;
+  transition: all 0.4s ease-in;
+}
+
+input:focus,
+input:hover {
+  border: 2px solid var(--green-medium);
+  cursor: pointer;
+}
+
+input.invalid {
+  border: 2px solid var(--red);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 2px solid var(--grey-500);
+  border-radius: 0.4rem;
+  outline: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background: inherit;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+}
+
+button:hover {
+  border: 2px solid var(--green-medium);
+}
+
+button.selected {
+  border: 2px solid var(--green-medium);
+  background: var(--green-lighter);
+}
+
+button > span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--grey-500);
+  margin-left: 8px;
+}
+
+button > span > img {
+  display: none;
+  margin-top: -0.15rem;
+  margin-left: -0.1rem;
+}
+.name-field {
+  display: flex;
+  gap: 0.5rem;
+}
+.name {
+  width: 100%;
+}
+
+.email {
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+
+.query-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.query {
+  width: 100%;
+}
+.message {
+  resize: none;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 6rem;
+  border-radius: 0.4rem;
+  border: 2px solid var(--grey-500);
+  margin-top: 1rem;
+  padding: 0.58rem;
+  outline: none;
+  transition: all 0.4s ease-in;
+}
+
+.message:focus,
+.message:hover {
+  border: 2px solid var(--green-medium);
+  cursor: pointer;
+}
+
+.message.invalid {
+  border: 2px solid var(--red);
+}
+
+.check-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.check-container > span {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-500);
+}
+
+.check-container > span > img {
+  display: none;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--green-medium);
+  border-radius: 0.6rem;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.error {
+  margin: 0.5rem;
+  color: var(--red);
+  font-size: 0.8rem;
+}
+
+.success-message {
+  width: 25rem;
+  background: var(--grey-900);
+  color: var(--white);
+  padding: 1.2rem;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  display: none;
+}
+.success-messapge-p {
+  font-size: 0.9rem;
+}
+
+.success-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .name-field {
+    flex-direction: column;
+  }
+
+  .query-container {
+    flex-direction: column;
+  }
+
+  .success-message {
+    width: 70%;
+  }
+}

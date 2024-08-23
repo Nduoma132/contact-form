@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Contact form</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="container">
+      <h1 class="contact">Contact Us</h1>
+      <form onsubmit="validateform(event)">
+        <div class="name-field">
+          <div class="name">
+            <label for="first-name">First Name *</label>
+            <input type="text" class="first-name" />
+            <p class="error firstNameErr"></p>
+          </div>
+
+          <div class="name">
+            <label for="last-name">Last Name *</label>
+            <input type="text" class="last-name" />
+            <p class="error lastNameErr"></p>
+          </div>
+        </div>
+
+        <label for="email">Email Address *</label>
+        <input class="email" type="text" />
+        <p class="error emailErr"></p>
+
+        <label for="">Query Type *</label>
+
+        <div class="query-container">
+          <div class="query">
+            <button class="query1">
+              <span
+                ><img
+                  src="./assets/images/icon-radio-selected.svg"
+                  alt=""
+                  class="img-gen"
+              /></span>
+              General Enquiry
+            </button>
+            <p class="error queryErr"></p>
+          </div>
+          <div class="query">
+            <button class="query2">
+              <span
+                ><img
+                  src="./assets/images/icon-radio-selected.svg"
+                  alt=""
+                  class="img-sup"
+              /></span>
+              Support Request
+            </button>
+          </div>
+        </div>
+
+        <label for="">Message *</label>
+        <textarea class="message" name="" id="textarea"></textarea>
+        <p class="error textAreaErr"></p>
+
+        <div class="check-container">
+          <span class="check-span"
+            ><img src="./assets/images/icon-checkbox-check.svg" alt=""
+          /></span>
+          <p>I consent to being contacted by the team</p>
+          <p class="error checkErr"></p>
+        </div>
+        <input class="btn-submit" type="submit" value="Submit" />
+      </form>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Nduoma132</a>.
+      </div>
+    </section>
+    <section class="success-message">
+      <div class="success-header">
+        <img src="./assets/images/icon-success-check.svg" alt="" />
+        <h2>Message Sent!</h2>
+      </div>
+      <div>
+        <p class="success-messapge-p">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
